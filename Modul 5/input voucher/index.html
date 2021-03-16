@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>INPUT VOUCHER TES</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            Form Tambah Voucher
+          </div>
+          <div class="card-body">
+            <form action="" method="POST">
+              <div class="form-group">
+                <label for="nama">Nama Voucher</label>
+                <input type="text" class="form-control" id="nama" name="nama">
+                <small class="form-text text-danger"><?= form_error('nama'); ?></small>
+              </div>
+              <div class="form-group">
+                <label for="deskripsi">Deskripsi</label>
+                <input type="text" class="form-control" id="deskripsi" name="deskripsi">
+                <small class="form-text text-danger"><?= form_error('deskripsi'); ?></small>
+              </div>
+              <div class="form-group">
+                <label for="tipe">Type</label>
+                <select class="form-control" id="tipe" name="tipe">
+                  <option value="PLN">Voucher PLN</option>
+                  <option value="GAME">Voucher Game</option>
+                  <option value="PULSA">Voucher Pulsa</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="harga">Harga</label>
+                <input type="text" class="form-control" id="harga" name="harga">
+                <small class="form-text text-danger"><?= form_error('harga'); ?></small>
+              </div>
+              <br>
+              <button type="submit" name="insert" class="btn btn-primary float-right">Insert Data</button>
+            </form>
+          </div>
+        </div>
+</body>
+
+</html>
